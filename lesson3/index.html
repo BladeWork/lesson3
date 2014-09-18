@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Interactive Fiction</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="player_inventory" class="itemable">
+        <div class="item-container">
+            <h3>Inventory:</h3>
+            <div class="inventory-box empty"></div>
+            <div class="inventory-box empty"></div>
+            <div class="inventory-box empty"></div>
+        </div> <!-- end of item container -->
+    </div> <!-- end of player inventory -->
+
+    <div id="impress">
+        <div id="1" class="step slide itemable">
+            <div class="slide-text">
+                <p>There's a time machine over there.  Flip the switch?</p>
+                <p><a href="#2">FLIP</a> it.</p>
+                <p><a href="#3">WAIT</a> for your dad, who is a scientist, to come home</p>
+            </div> <!-- end of slide-text -->
+            <div class="menu item-container">
+                <div class="inventory-box">
+                    <img src="images/bat.png" alt="bat" class="item" id="bat" />
+                </div> <!-- end of inventory box -->
+            </div> <!-- end of menu container -->
+        </div> <!-- end of slide 1 -->
+        <div id="2" class="step slide itemable" data-x="1500">
+            <div class="slide-text">
+                <p>You went back in time. It was fun.</p>
+            </div> <!-- end of slide text -->
+            <div class="menu">
+                <a href="#1">START OVER</a>
+            </div> <!-- end of menu-->
+        </div> <!-- end of slide 2 -->
+        <div id="3" class="step slide itemable" data-x="-1500">
+            <div class="slide-text">
+                <p>You hung around for a while, and then your dad came home.</p>
+                <p>Then he helped you with your homework.</p>
+                <p>It was kind of fun, but not that much fun.</p>
+            </div> <!-- end of slide text -->
+            <div class="menu">
+                <a href="#1">START OVER</a>
+            </div> <!-- end of menu -->
+        </div> <!-- end of slide 3 -->
+    </div> <!-- end of impress -->
+    <!-- JavaScript section -->
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+
+    <script src="js/game.js"></script>
+    <script src="js/dragDrop.js"></script>
+</body>
+</html>
